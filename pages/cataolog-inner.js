@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Navbar from './navbar'
-import Banner from '../Components/banner'
+import Banner from '..Components/Banner'
 
 export default function catalog() {
   return (
