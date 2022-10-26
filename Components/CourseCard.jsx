@@ -44,7 +44,9 @@ const CourseCard = ({
             >
                 <div className={Styles.container}>
                 <span className={Styles.features__text}>{num}</span>
-                <div className="features__svg mb-10">
+                <div className="features__svg" style={{
+                    marginBottom: 40
+                }}>
                     {console.log(icon)}
 
                     {icon == "painting" &&
