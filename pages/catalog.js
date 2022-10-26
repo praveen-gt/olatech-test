@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Navbar from './navbar'
 import Banner from '../Components/Banner'
-import Styles from '../styles/Catalog.module.css'
+// import Styles from '../styles/Catalog.module.css'
 import CourseCard from '../Components/CourseCard'
 import CourseContent from '../Components/CourseContent'
 // import { Button, Modal, ModalBody, ModalFooter } from "reactstrap";
