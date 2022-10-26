@@ -43,7 +43,12 @@ const Modal = ({
                 leaveTo="opacity-0"
                 leaveFrom="opacity-100"
             >
-                <div style={{ zIndex: '2' }} onClick={() => HandleChange()} className="w-full h-full left-0 top-0 bg-black/50 fixed" />
+                <div style={{
+                    zIndex: '2',
+                    background: '#0005',
+                    left: 0
+                }} 
+                onClick={() => HandleChange()} className="w-full h-full left-0 top-0 bg-black/50 fixed" />
             </Transition.Child>
             <Transition.Child
                 as={Fragment}
@@ -61,13 +66,15 @@ const Modal = ({
                     right: 0,
                     margin: 'auto'
                 }}
-                 className="flex justify-center items-center h-full w-full fixed">
+                    className="flex justify-center items-center h-full w-full fixed">
                     <div className={`w-full ${classes ? classes : 'p-4 bg-white rounded-lg'}`}
-                    style={{
-                        maxWidth: width,
-                        maxHeight: height,
-                        overflow: overflow
-                    }}>
+                        style={{
+                            maxWidth: width,
+                            maxHeight: height,
+                            overflow: overflow,
+                            padding: 20,
+                            // overflow: 'hidden'
+                        }}>
                         <div className="w-full flex justify-between items-center mb-6">
                             <p className="font-medium text-lg">{title}</p>
                             <div onClick={() => HandleChange()} className="w-8 h-8 flex justify-center items-center rounded-lg transition-all duration-200 cursor-pointer hover:bg-zinc-500/20">
@@ -78,7 +85,7 @@ const Modal = ({
                             </div>
                         </div>
                         <p className="text-md">{content}</p>
-                        <div className="mt-6 flex justify-end items-center gap-2">
+                        {/* <div className="mt-6 flex justify-end items-center gap-2">
                             {buttons.map((button, index) => (
                                 <button
                                     onClick={() => {
@@ -101,7 +108,7 @@ const Modal = ({
                                     {button.label}
                                 </button>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </Transition.Child>
